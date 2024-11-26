@@ -53,12 +53,31 @@ body {
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay color with transparency */
         url('christ.jpg') no-repeat center right/cover; /* Background image */
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between logo and text */
+}
+
+.hero-logo {
+    width: 80px; /* Adjust the size of the logo */
+    height: auto;
+    border-radius: 50%; /* Optional: Makes the logo circular */
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    text-align: left;
 }
+
 
 /* Tools Section */
 .tools {
