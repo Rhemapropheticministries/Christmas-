@@ -1,112 +1,127 @@
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between; /* Space between logo and nav items */
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #01013d;
-    color: rgb(2, 255, 57);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    background-color: #f5f5f5; /* Light gray background */
+    width: 100%;
 }
 
 /* Navbar */
+.navbar {
+    background-color: #001a57; 
+    /* background-image: url('download.jpg'); */
+    padding: 1rem 2rem;
+    text-align: right;
+    /* width: 100%; */
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 1.5rem; /* Space between menu items */
-    margin-left: auto; /* Aligns items to the right */
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Align items to the right */
 }
 
 .navbar a {
     text-decoration: none;
     color: white;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #f1faee;
+    color: #f1faee; /* Lighter color on hover */
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Overlay color with transparency */
-        url('christ.jpg') no-repeat center right/cover; /* Background image */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Header Section */
+
+/* new css */
+.header {
+    background-image: url('back3.jpeg');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire header */
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 100%;
+    height: 250px; /* Adjust the height as needed */
 }
 
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .header {
+        background-image: url(back3.jpeg);
+        height: 200px; /* Adjust the height for smaller screens */
+        padding: 1rem;
+        background-size: cover; /* Keeps the image full-width on smaller screens */
+    }
+}
+
+
+/* Hero Content */
 .hero-content {
     display: flex;
     align-items: center;
     gap: 1rem; /* Space between logo and text */
+    justify-content: center;
 }
 
 .hero-logo {
-    width: 80px; /* Adjust the size of the logo */
+    width: 100px; /* Adjust the size of the logo */
     height: auto;
-    border-radius: 50%; /* Optional: Makes the logo circular */
+    border-radius: 50%; /* Makes the logo circular */
+    /* background-repeat: no-repeat; */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.hero-content h1 {
+    font-size: 2rem;
     margin: 0;
-    text-align: left;
+    color: #00ff00; /* Green text */
+    text-align: center;
+    font-family: Calibri (Body);
 }
 
+.hero-content p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
 
 /* Tools Section */
 .tools {
     padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
 .tools h2 {
-    text-align: center;
     margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #D2B48C;
 }
 
-.tool-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+/* Tool Container */
+.tool-container {
+    display: flex;
+    flex-direction: column; /* Stack tools vertically */
+    gap: 1.5rem; /* Space between the tools */
+    align-items: center;
 }
 
+/* Tool Card */
 .tool-card {
     background: white;
     border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
     border-radius: 8px;
+    padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.tool-card:hover {
-    transform: scale(1.05);
+    width: 100%; /* Full width */
+    max-width: 500px; /* Limit the maximum width */
+    text-align: center;
 }
 
 .tool-card img {
@@ -116,25 +131,121 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Footer */
+.tool-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #001a57; /* Navy blue */
+}
+
+.tool-card p {
+    color: #555;
+}
+.video-section2 p{
+    font-style: italic;
+}
+
+/* About Section */
+.about {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+}
+
+/* Redirect Button */
+.redirect-button {
+    display: inline-block;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.redirect-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.redirect-button:active {
+    transform: scale(0.95); /* Slight compression on click */
+}
+
+/* Footer Section */
 .footer {
+    background-color: #001a57; /* Navy blue background */
+    color: white;
     text-align: center;
     padding: 1rem;
-    background-color: #01013d;
-    color: white;
-    position: relative;
-    bottom: 0;
+    margin-top: 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.5rem;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
+
+
+/* new */
+.video-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.video-item {
+    margin-bottom: 1rem;
+}
+
+.video-item p {
+    font-weight: bold;
+    color: #001a57; /* Navy blue */
+}
+
+.video-item a {
+    color: #007bff; /* Blue */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.video-item a:hover {
+    color: #0056b3; /* Darker blue */
+}
+
+
