@@ -408,6 +408,8 @@ body {
 @media (max-width: 600px) {
     .header-video {
         height: 40vh; /* Reduce height for smaller screens */
+        width: auto;
+        padding: 2rem;
     }
 
     .header-content h1 {
