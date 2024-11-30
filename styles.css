@@ -40,23 +40,23 @@ body {
 
 /* new css */
 .header {
-    background-image: url('back3.jpeg');
+    /* background-image: url('back3.jpeg'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; /* Ensures the image covers the entire header */
     color: #fff;
-    padding: 1.5rem;
+    padding: 31;
     text-align: center;
     max-width: 100%;
-    height: 250px; /* Adjust the height as needed */
+    height: 430px; /* Adjust the height as needed */
 }
 
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
     .header {
-        background-image: url(back3.jpeg);
-        height: 200px; /* Adjust the height for smaller screens */
-        padding: 1rem;
+        /* background-image: url('back3.jpeg'); */
+        height: 410px; /* Adjusted height for smaller screens */
+        padding: .2rem;
         background-size: cover; /* Keeps the image full-width on smaller screens */
     }
 }
@@ -93,7 +93,7 @@ body {
 
 /* Tools Section */
 .tools {
-    padding: 2rem 1rem;
+    padding: 1rem;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -139,6 +139,31 @@ body {
 
 .tool-card p {
     color: #555;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+    .tools {
+        padding: 0.8rem; /* Reduce padding */
+        margin-top: -40%;
+    }
+
+    .tool-container {
+        gap: 0.8rem; /* Less spacing between tools */
+    }
+
+    .tool-card {
+        padding: 0.8rem; /* Compact card padding */
+        max-width: 100%; /* Remove max-width constraint for smaller screens */
+    }
+
+    .tool-card h3 {
+        font-size: 1.1rem; /* Further reduce font size for headings */
+    }
+
+    .tool-card p {
+        font-size: 0.8rem; /* Smaller paragraph text */
+    }
 }
 .video-section2 p{
     font-style: italic;
@@ -294,3 +319,102 @@ body {
       font-size: 14px; /* Further reduce font size */
     }
   }
+
+  #about {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  #about img {
+    width: 100%; /* Full width for smaller devices */
+    max-width: 600px; /* Maximum size for larger screens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #about h2 {
+      font-size: 20px;
+    }
+
+    #about p {
+      font-size: 14px;
+    }
+
+    #about img {
+      max-width: 90%; /* Reduce width slightly for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    #about h2 {
+      font-size: 18px;
+    }
+
+    #about p {
+      font-size: 12px;
+    }
+  }
+
+ 
+
+
+
+/* video */
+/* Base styles for the header */
+.header-video {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Adjust height for a proportional header */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.header-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the header */
+    z-index: -1; /* Places the video behind the content */
+}
+
+.header-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Ensures content is above the video */
+    padding: 1rem;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+    .header-video {
+        height: 40vh; /* Reduce height for smaller screens */
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+}
