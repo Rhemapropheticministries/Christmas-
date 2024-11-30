@@ -273,3 +273,24 @@ body {
     color: #333;
     font-weight: bold;
   }
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .iframe-container {
+      width: 90%; /* Adjust to 90% of screen width */
+    }
+
+    .video-title {
+      font-size: 16px; /* Reduce font size */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .iframe-container {
+      width: 100%; /* Full width on very small devices */
+      max-width: 400px; /* Set a maximum size */
+    }
+
+    .video-title {
+      font-size: 14px; /* Further reduce font size */
+    }
+  }
